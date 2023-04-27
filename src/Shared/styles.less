@@ -1,0 +1,623 @@
+@charset: "utf-8";
+/* CSS Document */
+
+/* Import Semantic Ui css  https://localhost:3700/ 
+  @import url("https://localhost:3700/src/Shared/semantic.css"); 
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css");
+*/
+
+/* Import Material icons 
+  @import "~/node_modules/material-design-icons/iconfont/material-icons.css";
+*/
+
+/* Import Fontawsome css  
+  @import url("https://localhost:3700/src/Shared/fontawesome.css"); */
+  @import url("https://use.fontawesome.com/releases/v5.4.1/css/all.css");
+
+  
+  
+/*-------------------------
+  Parameters common
+--------------------------*/
+
+body {
+  zoom:  1.0;
+  box-sizing: border-box;  
+}
+
+
+
+.w_10_rem {
+  width: 10rem;
+}
+.w_10 {
+  width: 10%;
+}
+.w_15 {
+  width: 15%;
+}
+.w_20 {
+  width: 20%;
+}
+.w_25 {
+  width: 25%;
+}
+.w_30 {
+  width: 30%;
+}
+.w_50 {
+  width: 50%;
+}
+.w_85 {
+  width: 85%;
+}
+.w_100 {
+  width: 100%;
+}
+
+.t_a_l { text-align: left; }
+.t_a_c { text-align: center; }
+
+.br_t_4_px {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.br_b_4_px {
+  border-radius: 0px 0px 14px 14px;
+}
+
+.b_ttl {
+  border: 1px solid grey;
+}
+
+.b_cell {
+  border: 1px solid #cccccc;
+}
+
+.w_200 { width: 200%; }
+.w_m_c { width: max-content; }
+
+.p_a {
+  position: absolute;
+}
+
+.d_i_b {
+  display: inline-block;
+}
+.d_f {
+  display: flex;
+}
+.d_t {
+  display: table;
+  border-collapse: collapse;
+}
+.d_t_r {
+  display: table-row;
+}
+.d_t_c {
+  display: table-cell;
+}
+.f_d_i {
+  flex-direction: initial;
+}
+.f_d_c {
+  flex-direction: column;
+}
+
+.a_i_c {
+  align-items: center;
+}
+
+.line_break {
+  width: 100%;
+}
+.p_x_0p25_rem {
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+}
+.p_y_0p25_rem {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.p_t_0p25_rem {
+  padding-top: 0.5rem;
+}
+.p_r_0p25_rem {
+  padding-right: 0.5rem;
+}
+.p_b_0p25_rem {
+  padding-bottom: 0.5rem;
+}
+.p_l_0p25_rem {
+  padding-left: 0.25rem;
+}
+.p_l_1 { padding-left: 1%; }
+.p_l_2 { padding-left: 2%; }
+.p_l_5 { padding-left: 5%; }
+
+.p_r_1 { padding-right: 1%; }
+.p_r_3 { padding-right: 3%; }
+
+.p_b_1 { padding-bottom: 1%; }
+
+.m_b_0p25_rem {
+  margin-bottom: 0.25rem;
+}
+
+.m_t_corner {
+  margin-top: -26%;
+}
+.m_b_corner {
+  margin-bottom: -26%;
+}
+
+.f_r {
+  float: right;
+}
+
+.checked:checked {
+  height: 15px;
+  width: 15px;
+}
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+
+.rotate_90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.rotate_270 {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.d_f {
+  display: flex;
+}
+
+.f_d_c {
+  flex-direction: column;
+}
+
+.r_0 { right: 0em !important; }
+
+.c_p { cursor: pointer; }
+
+.v_a_m { vertical-align: middle; }
+
+.p_l_0p5_rem { padding-left: 0.5rem; }
+.p_x_0p5_rem { padding: 0 0.5rem 0 0.5rem; }
+
+.b_r_4_px { border-radius: 5px; }
+
+.w_s_nw {
+  white-space:'nowrap';
+}
+
+.m_l_3p5 {
+  margin-left: -3.5em;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  
+}
+
+@media screen and (max-width: 480px) {
+
+  
+}
+
+
+/* *****************************************
+  Styles to provide Hoverable Dropdown to 
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown_hover
+****************************************** */
+
+.fitContent {
+  min-width: fit-content;
+  min-width: -moz-fit-content;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown:hover .dropdown-content {display: flex;}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  color: #2196F3;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0.2em;
+  -moz-border-radius: 0.1em;
+	-webkit-border-radius: 0.1em;
+	border-radius: 0.1em;
+  text-align: left;
+}
+
+.dropdown-content > div > i {
+  padding: 0.3em 0.7em 0.3em 0em;
+  text-decoration: none;
+  text-align: left;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content > div:first-of-type > i { 
+  padding: 0.3em 0.7em 0.3em 0.7em;
+}
+
+.dropdown-content > a {
+  color: #2196F3;
+  padding: 0.1em 0.5em;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-content > a:hover {
+  color: #2196F3;
+} 
+.dropdown-content > a:active {
+  color: #2196F3;
+}
+
+.dropdown-content > a:first-of-type { 
+  padding: 0.6em 0.5em 0.1em 0.5em;
+}
+.dropdown-content > a:last-of-type { 
+  padding: 0.1em 0.5em 0.6em 0.5em;
+}
+.dropdown-content > a:only-of-type { 
+  padding: 0.4em 0.5em 0.3em 0.5em;
+}
+
+/* *****************************************
+  Styles to provide placeholder to a contenteditable wit
+****************************************** */
+
+.placeholder[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #90a4ae; 
+}
+
+.placeholderAppTopTarget {
+    font-size: 1.5em;
+    position: relative;
+    margin: 0px 20%;
+    white-space: nowrap;
+    padding-top: 1em;
+}
+
+/* *****************************************
+  Styles to prevent blue border to a countable div
+****************************************** */
+
+.contenteditable:focus {
+    outline: none;
+}
+
+
+/* *****************************************
+  Styles for signUp, signIn input elems
+****************************************** */
+
+.BemInput > input, .signUpInOut_input {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0.5em;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+/* *****************************************
+  Styles to provide color and shape for Sign Up, In, Out block
+****************************************** */
+
+.bemButton > .button, .signUpInOut__button.button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal Arial, Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #0199d9;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  width: -webkit-fill-available;
+  text-align: center;
+  text-transform: uppercase;
+}
+.signUpInOut__button.button:hover {
+  background-color: #0070A0 !important;
+  -webkit-transition: all .1s ease-in-out !important;
+  transition: all .1s ease-in-out !important;
+}
+
+
+/* ***************************************** 
+  Styles to provide witInstance icons with tooltips  
+****************************************** */
+/* Tooltip container */
+.tooltipWit {
+    position: relative;
+}
+
+.tooltiptextWit {
+  margin-left: 0.1em;
+}
+
+/* Tooltip text */
+.tooltipWit .tooltiptextWit {
+    visibility: hidden;
+    width: 120px;
+    background-color: #90A4AE;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipWit:hover .tooltiptextWit {
+    visibility: visible;
+}
+
+/* ***************************************** 
+  Styles to provide barEllipsis icons with tooltips  
+****************************************** */
+/* Tooltip container */
+.tooltipEll {
+  position: relative;
+}
+
+.tooltiptextEll {
+  right: 0em;
+}
+
+/* Tooltip text */
+.tooltipEll .tooltiptextEll {
+  visibility: hidden;
+  width: fit-content;
+  background-color: #90A4AE;
+  color: #fff;
+  text-align: center;
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipEll:hover .tooltiptextEll {
+  visibility: visible;
+}
+
+
+/* ***************************************** 
+  Styles to provide scrollbar inside a wit 
+****************************************** */
+.h_min_1_em {
+  height: calc(100% - 1em);
+}
+
+.w_min_0p5_em {
+  width: calc(100% - 0.5em);
+}
+
+.force_overflow {
+  min-height: calc(100% - 2em);
+  min-width: calc(100%);
+}
+
+/*
+.webkit_scrollbar::-webkit-scrollbar {
+    width: 1em;
+    height: 1em;
+}
+ 
+.webkit_scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.webkit_scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.webkit_scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+*/
+
+
+.webkit_scrollbar::-webkit-scrollbar {
+    height: 11px;
+    overflow: visible;
+    width: 16px;
+}
+
+.webkit_scrollbar::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+
+.webkit_scrollbar::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.webkit_scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 1px 1px 1px 6px;
+    min-height: 28px;
+    padding: 100px 0 0;
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1), inset 0 -1px 0 rgba(0,0,0,.07);
+}
+
+.webkit_scrollbar::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 4px;
+}
+
+
+
+/* ***************************************** 
+  Background image for witTarget 
+****************************************** */
+
+.bgi_AppTopTarget::after{
+    background-image: url(https://top-facilitation.com/cdi/uploads/37HistorScanphoto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ***************************************** 
+  Style textarea
+****************************************** */
+
+.textarea {
+  overflow: hidden;
+}
+
+.textarea:focus {
+    outline: none !important;
+    border-color: #E0E0E0; /* #719ECE */
+    box-shadow: 0 0 10px #E0E0E0; /* #719ECE */
+}
+
+/* ***************************************** 
+  Style for development and debugging 
+****************************************** */
+
+.borderBlack {
+  border: solid 1px black;
+}
+
+.borderBlue {
+  border: solid 1px blueviolet;
+}
+
+.borderGreen {
+  border: solid 1px green;
+}
+
+.borderRed {
+  border: solid 1px red;
+}
+
+/* ***************************************** 
+  Style for square to manage webkit_scrollbar
+****************************************** */
+.wit__resizeManager {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 0px;
+  bottom: 0;
+  background: blue;
+  border: 1px solid black;
+  z-index: 1000;
+}
+
+.wit__animation {
+  -webkit-animation: mymove 2s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 2s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {}
+
+
+/* ***************************************** 
+  Style for making a resizable div in JS
+****************************************** */
+
+.resizer{
+  position: absolute;  
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;  
+  width: 15px;
+  height: 15px;
+  border-radius: 50%; /*magic to turn square into circle*/
+  z-index: 1010;
+  position: absolute;
+}
+
+.resizer.top-left {
+  left: -5px;
+  top: -5px;
+  cursor: nwse-resize; /*resizer cursor*/
+}
+.resizer.top-right {
+  right: -5px;
+  top: -5px;
+  cursor: nesw-resize;
+}
+.resizer.bottom-left {
+  left: -5px;
+  bottom: -5px;
+  cursor: nesw-resize;
+}
+.resizer.bottom-right {
+  right: -5px;
+  bottom: -5px;
+  cursor: nwse-resize;
+}
+
+
+
